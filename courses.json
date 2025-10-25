@@ -1,0 +1,106 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Nuxt 3 Basics",
+      "icon": "ph:book",
+      "url": "nuxt3basics",
+      "description": "Learn the fundamentals of Nuxt 3.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "lessons": [
+            { "id": 1, "title": "What is Nuxt 3?" },
+            { "id": 2, "title": "Setting up the Environment" }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Pages and Routing",
+          "lessons": [
+            { "id": 1, "title": "Creating Pages" },
+            { "id": 2, "title": "Dynamic Routing" },
+            { "id": 3, "title": "Navigation" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Nuxt 3 Advanced",
+      "icon": "ph:rocket",
+      "url": "nuxt3advanced",
+      "description": "Deep dive into advanced Nuxt 3 features.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "State Management",
+          "lessons": [
+            { "id": 1, "title": "Using Pinia" },
+            { "id": 2, "title": "Global State" }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "API Integration",
+          "lessons": [
+            { "id": 1, "title": "Fetching Data" },
+            { "id": 2, "title": "Async Data" },
+            { "id": 3, "title": "Error Handling" }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Deployment",
+          "lessons": [
+            { "id": 1, "title": "Static Hosting" },
+            { "id": 2, "title": "Server-side Rendering" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Nuxt 3 Project",
+      "icon": "ph:code",
+      "url": "nuxt3project",
+      "description": "Build a real-world project with Nuxt 3.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Project Setup",
+          "lessons": [
+            { "id": 1, "title": "Planning the Project" },
+            { "id": 2, "title": "Initial Setup" }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Building Features",
+          "lessons": [
+            { "id": 1, "title": "User Authentication" },
+            { "id": 2, "title": "CRUD Operations" },
+            { "id": 3, "title": "UI Components" }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Testing",
+          "lessons": [
+            { "id": 1, "title": "Unit Testing" },
+            { "id": 2, "title": "End-to-End Testing" }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Launch",
+          "lessons": [
+            { "id": 1, "title": "Final Review" },
+            { "id": 2, "title": "Deployment" }
+          ]
+        }
+      ]
+    }
+  ]
+}

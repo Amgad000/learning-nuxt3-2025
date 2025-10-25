@@ -1,9 +1,19 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
-/* @theme {
-  --font-sans: 'Barriecito', system-ui;
-} */
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+}
 
-/* :root {
-} */
+:root {
+  --ui-bg: var(--ui-color-neutral-50);
+}
+
+.dark {
+  --ui-bg: var(--ui-color-neutral-900);
+}
+
+a.router-link-active,
+a.router-link-exact-active {
+  @apply text-primary;
+}

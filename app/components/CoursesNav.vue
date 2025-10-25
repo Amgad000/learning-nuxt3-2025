@@ -1,7 +1,5 @@
-<script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
-
-const items = ref<NavigationMenuItem[][]>([
+<script setup>
+const items = ref([
   [
     {
       label: 'menu',
