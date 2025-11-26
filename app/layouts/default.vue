@@ -14,20 +14,20 @@
       <template #right>
         <UColorModeButton class="cursor-pointer" />
 
-        <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+        <UTooltip :text="user ? 'log out' : 'log in'">
           <UButton
             color="neutral"
             variant="ghost"
-            to="https://github.com/nuxt/ui"
-            target="_blank"
-            icon="i-simple-icons-github"
-            aria-label="GitHub"
+            class="cursor-pointer"
+            icon="i-lucide-user"
+            aria-label="User"
+            @click="logOut"
           />
         </UTooltip>
       </template>
     </UHeader>
 
-    <UContainer>
+    <UContainer class="min-h-[80lvh]">
       <slot />
     </UContainer>
 
@@ -69,6 +69,17 @@
 </template>
 
 <script setup lang="ts">
+const supabase = useSupabaseClient()
+const user = useSupabaseUser()
+
+function logOut() {
+  if (user) {
+    supabase.auth.signOut()
+  } else {
+    return
+  }
+}
+
 const route = useRoute()
 
 const items = computed(() => [

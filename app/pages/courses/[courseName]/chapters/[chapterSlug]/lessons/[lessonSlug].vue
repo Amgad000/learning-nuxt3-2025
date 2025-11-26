@@ -21,4 +21,32 @@ let chapter = specificCourse.chapters.find(
   el => el.id == useRoute().params.chapterSlug
 )
 let lesson = chapter.lessons.find(el => el.id == useRoute().params.lessonSlug)
+
+definePageMeta({
+  middleware: function ({ params }, from) {
+    const specificCourse = useSpecificCourse(params.courseName)
+
+    let chapter = specificCourse.chapters.find(
+      el => el.id == params.chapterSlug
+    )
+    if (!chapter) {
+      return abortNavigation(
+        createError({
+          statusCode: '404',
+          message: 'this chapter does not exist',
+        })
+      )
+    }
+
+    let lesson = chapter.lessons.find(el => el.id == params.lessonSlug)
+    if (!lesson) {
+      return abortNavigation(
+        createError({
+          statusCode: '404',
+          message: 'this Lesson does not exist',
+        })
+      )
+    }
+  },
+})
 </script>

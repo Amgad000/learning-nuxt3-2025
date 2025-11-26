@@ -44,4 +44,18 @@
 const route = useRoute()
 const courseName = route.params.courseName
 const specificCourse = useSpecificCourse(courseName)
+
+definePageMeta({
+  middleware: function ({ params }, from) {
+    const specificCourse = useSpecificCourse(params.courseName)
+    if (!specificCourse) {
+      return abortNavigation(
+        createError({
+          statusCode: '404',
+          message: 'this Course does not exist',
+        })
+      )
+    }
+  },
+})
 </script>

@@ -19,11 +19,10 @@ const items = ref([
   ],
   [
     {
-      label: 'GitHub',
-      icon: 'i-simple-icons-github',
+      label: 'User',
+      icon: 'i-lucide-user',
       badge: '3.8k',
-      //   to: 'https://github.com/nuxt/ui',
-      //   target: '_blank',
+      to: '/login',
     },
     {
       label: 'Help',
